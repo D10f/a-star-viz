@@ -1,5 +1,5 @@
 {
-    "name": "a-start-viz",
+    "name": "a-star-viz",
     "version": "1.0.0",
     "main": "index.js",
     "scripts": {

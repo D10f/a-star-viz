@@ -3,6 +3,8 @@
 // export const COLS = Math.floor(800 / CELL_SIZE);
 // export const ROWS = Math.floor(640 / CELL_SIZE);
 
+import { FlagTypeImageTable, TerrainTypeDifficultyTable, TerrainTypeImageTable } from "./types";
+
 export const FPS = 30;
 export const HEX_WIDTH = 55;
 export const HEX_SIZE = HEX_WIDTH / Math.sqrt(3);
@@ -17,19 +19,19 @@ export const ROWS = COLS;
 // export const ROWS = 30;
 
 export const ENDPOINT_TOKEN_IMG_TABLE: FlagTypeImageTable = {
-    START: 'startHex.png',
-    END: 'endHex.png',
+    START: '/startHex.png',
+    END: '/endHex.png',
     // ERROR: 'errorHex.png'
 };
 
 export const TERRAIN_TYPE_IMG_TABLE: TerrainTypeImageTable = {
-    DESERT: 'desertHex.gif',
-    GRASS: 'grassHex.gif',
-    MOUNTAIN: 'mountainHex.gif',
-    ORE: 'oreHex.gif',
-    WATER: 'waterHex.gif',
-    WHEAT: 'wheatHex.gif',
-    WOOD: 'woodHex.gif',
+    DESERT: '/desertHex.gif',
+    GRASS: '/grassHex.gif',
+    MOUNTAIN: '/mountainHex.gif',
+    ORE: '/oreHex.gif',
+    WATER: '/waterHex.gif',
+    WHEAT: '/wheatHex.gif',
+    WOOD: '/woodHex.gif',
 };
 
 export const TERRAIN_TYPE_DIFFICULTY_TABLE: TerrainTypeDifficultyTable = {

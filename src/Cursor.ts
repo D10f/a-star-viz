@@ -3,6 +3,7 @@ import Hexagon from "./Hexagon";
 import Renderer from "./Renderer";
 import { HEX_OFFSET_X, HEX_OFFSET_Y, HEX_SIZE, HEX_WIDTH, TERRAIN_TYPE_IMG_TABLE } from "./defs";
 import { pixelToHex } from "./utils";
+import { FlagType, TerrainType } from "./types";
 
 export default class Cursor {
 

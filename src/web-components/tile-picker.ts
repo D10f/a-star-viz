@@ -1,5 +1,6 @@
 import Canvas from "../Canvas";
-import { ENDPOINT_TOKEN_IMG_TABLE, TERRAIN_TYPE_IMG_TABLE } from "../defs";
+import { ENDPOINT_TOKEN_IMG_TABLE, TERRAIN_TYPE_DIFFICULTY_TABLE, TERRAIN_TYPE_IMG_TABLE } from "../defs";
+import { FlagType, TerrainType } from "../types";
 
 export default class TilePicker extends HTMLElement {
 
@@ -95,11 +96,21 @@ export default class TilePicker extends HTMLElement {
 
                 <h3>Terrain:</h3>
                 <div class="row" slot="terrainTiles">
-                    ${Object.entries(TERRAIN_TYPE_IMG_TABLE).map(([ terrain, img ]) => `
-                        <button type="${terrain}" layer"">
-                            <img src="${img}">
-                        </button>
-                    `).join('\n')}
+                    ${
+                        Object.entries(TERRAIN_TYPE_IMG_TABLE)
+                            .sort(([ a ], [ b ]) => (
+                    //@ts-ignore
+                                TERRAIN_TYPE_DIFFICULTY_TABLE[a] > TERRAIN_TYPE_DIFFICULTY_TABLE[b]
+                                    ? 1
+                                    : -1
+                            ))
+                            .map(([ terrain, img ]) => `
+                                <button type="${terrain}" layer"">
+                                    <img src="${img}">
+                                </button>
+                            `)
+                            .join('\n')
+                    }
                 </div>
 
                 <h3>Start/Target:</h3>
@@ -114,22 +125,22 @@ export default class TilePicker extends HTMLElement {
                 <h3>Player Controls:</h3>
                 <div class="row" slot="actionTiles">
                     <button action="play">
-                        <img src="play.png">
+                        <img src="/play.png">
                     </button>
                     <button action="pause">
-                        <img src="pause.png">
+                        <img src="/pause.png">
                     </button>
                     <button speed="0.25">
-                        <img src="speed-quarter.png">
+                        <img src="/speed-quarter.png">
                     </button>
                     <button speed="0.5">
-                        <img src="speed-half.png">
+                        <img src="/speed-half.png">
                     </button>
                     <button speed="0.75">
-                        <img src="speed-three-quarters.png">
+                        <img src="/speed-three-quarters.png">
                     </button>
                     <button class="active" speed="1">
-                        <img src="speed-one.png">
+                        <img src="/speed-one.png">
                     </button>
                 </div>
             </section>

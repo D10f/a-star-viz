@@ -1,3 +1,5 @@
+import { EventCallback } from "./types";
+
 class EventEmitter {
     private eventStore: Map<string, EventCallback[]>;
 

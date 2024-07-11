@@ -1,4 +1,5 @@
 import { HEX_SIZE, HEX_WIDTH } from "./defs";
+import { HexagonProps } from "./types";
 
 export default class Hexagon {
 

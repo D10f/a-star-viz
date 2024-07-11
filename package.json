@@ -1,12 +1,17 @@
 {
-    "name": "a-star-viz",
-    "version": "1.0.0",
-    "main": "index.js",
+    "author": "d10f",
+    "name": "@d10f/a-star-viz",
+    "version": "1.0.1",
+    "main": "dist/src/web-components/tile-picker.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/D10f/a-star-viz"
+    },
     "scripts": {
-        "start": "tsnd --respawn --transpile-only src/index.ts"
+        "start": "tsnd --respawn --transpile-only src/index.ts",
+        "build": "rimraf dist && swc src -d dist"
     },
     "keywords": [],
-    "author": "",
     "license": "ISC",
     "description": "",
     "devDependencies": {

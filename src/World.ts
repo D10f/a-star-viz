@@ -6,6 +6,7 @@ import Pathfinder from "./Pathfinder";
 import Renderer from "./Renderer";
 import Terrain from "./Terrain";
 import { map } from "./defs";
+import { CursorEvent, TerrainType } from "./types";
 import { angleBetweenPoints } from "./utils";
 
 export default class World {
@@ -54,10 +55,10 @@ export default class World {
                 let image, imageAngle;
 
                 if (idx === 0) {
-                    image = 'mark.png';
+                    image = '/mark.png';
                     imageAngle = 0;
                 } else {
-                    image = 'arrow.png';
+                    image = '/arrow.png';
                     imageAngle = angleBetweenPoints(hex.x, hex.y, arr[idx - 1].x, arr[idx - 1].y);
                 }
 

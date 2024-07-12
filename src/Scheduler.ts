@@ -14,7 +14,7 @@ export default class Scheduler {
     private _fps: number;
     private lastTick: number;
     private timer: number;
-    private animationFrameId: number;
+    //private animationFrameId: number;
     private tickEvent: string;
     public paused: boolean;
 
@@ -29,7 +29,7 @@ export default class Scheduler {
         this.updateInterval = props.updateInterval ?? 1000;
         this.tickEvent = props.tickEvent ?? 'tick';
         this.paused = false;
-        this.animationFrameId = 0;
+        //this.animationFrameId = 0;
     }
 
     get interval() {
@@ -74,6 +74,7 @@ export default class Scheduler {
             }
         }
 
-        this.animationFrameId = window.requestAnimationFrame(this.loop.bind(this));
+        //this.animationFrameId = window.requestAnimationFrame(this.loop.bind(this));
+        window.requestAnimationFrame(this.loop.bind(this))
     }
 }

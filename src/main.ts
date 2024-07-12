@@ -1,5 +1,5 @@
 import TilePicker from './web-components/tile-picker';
-import './style.css';
+//import './style.css';
 
 customElements.define('tile-picker', TilePicker);
 

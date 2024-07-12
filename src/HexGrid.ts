@@ -3,6 +3,10 @@ import Terrain from "./Terrain";
 import { ROWS, COLS, HEX_OFFSET_X, HEX_OFFSET_Y, HEX_WIDTH, TERRAIN_TYPE_IMG_TABLE, HEXAGON_RELATIVE_POSITION_MODIFIER } from "./defs";
 import { HexagonRelativePosition, TerrainType } from "./types";
 import { taxicabDistance } from "./utils";
+// @ts-ignore
+import startHex from './assets/startHex.png';
+// @ts-ignore
+import endHex from './assets/endHex.png';
 
 type HexGridProps = {
     map: number[][];
@@ -111,14 +115,14 @@ export default class HexGrid {
                         x,
                         y,
                         id: 'END',
-                        image: '/endHex.png'
+                        image: endHex
                     }));
                 } else if (mapIdx > 10) {
                     grid.push(new Hexagon({
                         x,
                         y,
                         id: 'START',
-                        image: '/startHex.png'
+                        image: startHex
                     }));
                 }
             }

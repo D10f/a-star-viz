@@ -5,6 +5,25 @@
 
 import { FlagTypeImageTable, TerrainTypeDifficultyTable, TerrainTypeImageTable } from "./types";
 
+// @ts-ignore
+import startHex from './assets/startHex.png';
+// @ts-ignore
+import endHex from './assets/endHex.png';
+// @ts-ignore
+import desertHex from './assets/desertHex.gif';
+// @ts-ignore
+import grassHex from './assets/grassHex.gif';
+// @ts-ignore
+import mountainHex from './assets/mountainHex.gif';
+// @ts-ignore
+import oreHex from './assets/oreHex.gif';
+// @ts-ignore
+import waterHex from './assets/waterHex.gif';
+// @ts-ignore
+import wheatHex from './assets/wheatHex.gif';
+// @ts-ignore
+import woodHex from './assets/woodHex.gif';
+
 export const FPS = 30;
 export const HEX_WIDTH = 55;
 export const HEX_SIZE = HEX_WIDTH / Math.sqrt(3);
@@ -19,19 +38,19 @@ export const ROWS = COLS;
 // export const ROWS = 30;
 
 export const ENDPOINT_TOKEN_IMG_TABLE: FlagTypeImageTable = {
-    START: '/startHex.png',
-    END: '/endHex.png',
+    START: startHex,
+    END: endHex,
     // ERROR: 'errorHex.png'
 };
 
 export const TERRAIN_TYPE_IMG_TABLE: TerrainTypeImageTable = {
-    DESERT: '/desertHex.gif',
-    GRASS: '/grassHex.gif',
-    MOUNTAIN: '/mountainHex.gif',
-    ORE: '/oreHex.gif',
-    WATER: '/waterHex.gif',
-    WHEAT: '/wheatHex.gif',
-    WOOD: '/woodHex.gif',
+    DESERT: desertHex,
+    GRASS: grassHex,
+    MOUNTAIN: mountainHex,
+    ORE: oreHex,
+    WATER: waterHex,
+    WHEAT: wheatHex,
+    WOOD: woodHex,
 };
 
 export const TERRAIN_TYPE_DIFFICULTY_TABLE: TerrainTypeDifficultyTable = {

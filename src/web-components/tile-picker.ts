@@ -1,6 +1,12 @@
 import Canvas from "../Canvas";
 import { ENDPOINT_TOKEN_IMG_TABLE, TERRAIN_TYPE_DIFFICULTY_TABLE, TERRAIN_TYPE_IMG_TABLE } from "../defs";
 import { FlagType, TerrainType } from "../types";
+import playImg from '../assets/play.png';
+import pauseImg from '../assets/pause.png';
+import speedQuarter from '../assets/speed-quarter.png';
+import speedHalf from "../assets/speed-half.png"
+import speedThreeQuarters from "../assets/speed-three-quarters.png";
+import speedOne from "../assets/speed-one.png";
 
 export default class TilePicker extends HTMLElement {
 
@@ -125,22 +131,22 @@ export default class TilePicker extends HTMLElement {
                 <h3>Player Controls:</h3>
                 <div class="row" slot="actionTiles">
                     <button action="play">
-                        <img src="/play.png">
+                        <img src="${playImg}" >
                     </button>
                     <button action="pause">
-                        <img src="/pause.png">
+                        <img src="${pauseImg}">
                     </button>
                     <button speed="0.25">
-                        <img src="/speed-quarter.png">
+                        <img src="${speedQuarter}">
                     </button>
                     <button speed="0.5">
-                        <img src="/speed-half.png">
+                        <img src="${speedHalf}">
                     </button>
                     <button speed="0.75">
-                        <img src="/speed-three-quarters.png">
+                        <img src="${speedThreeQuarters}">
                     </button>
                     <button class="active" speed="1">
-                        <img src="/speed-one.png">
+                        <img src="${speedOne}">
                     </button>
                 </div>
             </section>

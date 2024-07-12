@@ -12,6 +12,7 @@ TODO: ...
 
 - [x] Make it into a web component for ease of use.
 - [x] Publish as an https://www.npmjs.com/package/@d10f/a-star-viz[NPM package].
+- [x] Add bundler to include make all web component self-contained.
 - [ ] Customize terrain tiles.
 - [ ] Better support for various screen sizes.
 - [ ] Better customization options through attributes passed in at runtime.

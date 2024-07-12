@@ -8,7 +8,7 @@ import speedHalf from "../assets/speed-half.png"
 import speedThreeQuarters from "../assets/speed-three-quarters.png";
 import speedOne from "../assets/speed-one.png";
 
-export default class TilePicker extends HTMLElement {
+export default class AStarVisualization extends HTMLElement {
 
     private tilePicker: HTMLElement | null;
     private tileButtons: HTMLButtonElement[];
@@ -169,4 +169,4 @@ export default class TilePicker extends HTMLElement {
     }
 }
 
-customElements.define('tile-picker', TilePicker);
+customElements.define('a-star-viz', AStarVisualization);

@@ -13,7 +13,7 @@ if (process.env.NODE_ENV === 'production') {
 module.exports = {
     mode,
     target: 'web',
-    entry: './src/web-components/tile-picker',
+    entry: './src/web-components/a-star-viz.ts',
     output: {
         filename: '[name].js',
         path: path.resolve(__dirname, 'dist'),

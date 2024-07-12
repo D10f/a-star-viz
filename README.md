@@ -4,9 +4,39 @@ An interactive visualization of the A* pathfinding algorithm in action. It featu
 
 ![animated gif of the pathfinding visualization](assets/pathfinding_visualization.gif)
 
-## Instructions
+## Usage
 
-TODO: ...
+First, install the package:
+
+```console
+$ npm install @d10f/a-star-viz
+```
+
+This contains nothing but the Web Component that you can embed directly into your code. Just import, and use it.
+
+```js
+import '@d10f/a-star-viz';
+
+<a-star-viz />
+```
+
+If you're using Next.js, you're going to need to declare the component you're using this as a Client Component. In addition, the import of the package needs to happen asynchronously:
+
+```jsx
+"use client";
+
+import { useEffect } from "react";
+
+export default function SomePage() {
+    useEffect(() => {
+        import("@d10f/a-star-viz");
+    }, []);
+
+    return (
+        <a-star-viz />
+    );
+}
+```
 
 ##  To Dos
 

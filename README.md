@@ -38,6 +38,18 @@ export default function SomePage() {
 }
 ```
 
+In addition, to please the TypeScript compiler you will need to declare the custom element, as well as the module:
+
+```ts
+declare namespace JSX {
+    interface IntrinsicElements {
+        "a-star-viz": any;
+    }
+}
+
+declare module "@d10f/a-star-viz";
+```
+
 ##  To Dos
 
 - [x] Make it into a web component for ease of use.
@@ -46,3 +58,4 @@ export default function SomePage() {
 - [ ] Customize terrain tiles.
 - [ ] Better support for various screen sizes.
 - [ ] Better customization options through attributes passed in at runtime.
+- [ ] Improve TypeScript support.

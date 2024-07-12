@@ -1,7 +1,7 @@
 {
     "author": "d10f",
     "name": "@d10f/a-star-viz",
-    "version": "1.1.4",
+    "version": "1.1.6",
     "main": "main.js",
     "repository": {
         "type": "git",
@@ -10,7 +10,7 @@
     "scripts": {
         "start": "webpack serve",
         "build": "rimraf dist && export NODE_ENV=production; webpack",
-        "publish": "bash ./scripts/publish.sh"
+        "upload": "bash ./scripts/publish.sh"
     },
     "keywords": [],
     "license": "ISC",

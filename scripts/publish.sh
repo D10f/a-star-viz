@@ -15,6 +15,8 @@ cd "${PROJECT_DIR}" || exit
 
 cp package* README.md dist
 
-cd dist || exit
-rm ./*LICENSE*
-npm publish
+{
+    cd dist || exit
+    rm ./*LICENSE*
+    npm publish
+}

@@ -7,12 +7,12 @@ let devtool = 'source-map';
 if (process.env.NODE_ENV === 'production') {
     mode = 'production';
     target = 'browserslist';
-    devtool = '';
+    devtool = 'nosources-source-map';
 }
 
 module.exports = {
     mode,
-    target,
+    target: 'web',
     entry: './src/web-components/tile-picker',
     output: {
         filename: mode === 'development' ? '[name].js' : '[name].[contenthash].js',

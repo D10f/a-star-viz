@@ -1,7 +1,7 @@
 {
     "author": "d10f",
     "name": "@d10f/a-star-viz",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "main": "dist/src/web-components/tile-picker.js",
     "repository": {
         "type": "git",

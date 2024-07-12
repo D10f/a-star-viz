@@ -2,12 +2,12 @@ const path = require('path');
 
 let mode = 'development';
 let target = 'web';
-let devtool = 'source-map';
+let devtool = 'inline-source-map';
 
 if (process.env.NODE_ENV === 'production') {
     mode = 'production';
     target = 'browserslist';
-    devtool = 'nosources-source-map';
+    devtool = 'source-map';
 }
 
 module.exports = {
@@ -15,7 +15,7 @@ module.exports = {
     target: 'web',
     entry: './src/web-components/tile-picker',
     output: {
-        filename: mode === 'development' ? '[name].js' : '[name].[contenthash].js',
+        filename: '[name].js',
         path: path.resolve(__dirname, 'dist'),
     },
     module: {
